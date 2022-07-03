@@ -2,32 +2,43 @@
   text-align: center;
 }
 
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
-.App-header .ShoeCard{
+
+.App-header .ShoeCard {
   width: 500px;
   height: 500px;
   border-color: white;
   border-style: solid;
   margin: 10px;
-  
 }
 
-.App-header .ShoeCard .image,img{
- width:370px;
- height: 300px;
-padding-left: 25px;
+.App-header .ShoeCard .image, img {
+  width: 370px;
+  height: 300px;
+  padding-left: 25px;
 }
 
-.ShoeCard div{
+.ShoeCard div {
   padding: 10px;
 }
+
+.HomeDiv {
+  background-image: url("https://img.freepik.com/free-vector/interior-design-shoe-store-department-sports-shoes-men-women-new-collection-sneakers-chairs-trying-buyers-fashion-footwear-boutique_575670-1424.jpg?w=2000");
+}
+/*# sourceMappingURL=App.css.map */

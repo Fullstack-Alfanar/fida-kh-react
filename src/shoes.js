@@ -1,5 +1,5 @@
 
-import './App.css';
+import './App.scss';
 function shoes(props){
     return(
         <div className="ShoeCard">
