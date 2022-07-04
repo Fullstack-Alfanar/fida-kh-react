@@ -16,7 +16,9 @@ function App() {
       >
         <Link to="/">Home</Link> |{" "}
         <Link to="/addworker">Add worker</Link> |{" "}
-        <Link to="/addshoes">Add shoes</Link>
+        <Link to="/addshoes">Add shoes</Link> |{" "}
+        <Link to="/getworker">Show workers</Link> |{" "}
+        <Link to="/getshoes">Show shoes</Link>
       </nav>
       <div className="App-body" >
         

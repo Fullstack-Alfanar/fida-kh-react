@@ -3,6 +3,9 @@ import { useRoutes } from "react-router-dom";
 import AddWorker from "../addworker";
 import AddShoes from "../addshoes";
 import HomePage from "../home";
+import GetWorkers from "../workers";
+import GetShoes from "../shoes"
+
 
 function AppRoute() {
   let element = useRoutes([
@@ -17,6 +20,14 @@ function AppRoute() {
     {
       path: "addshoes",
       element: <AddShoes />
+    },
+    {
+      path: "getworker",
+      element: <GetWorkers />
+    },
+    {
+      path: "getshoes",
+      element: <GetShoes />
     },
   ]);
 

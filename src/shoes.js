@@ -1,19 +1,49 @@
-
+import React from "react";
+import { useEffect, useState } from 'react';
 import './App.scss';
-function shoes(props){
-    return(
-        <div className="ShoeCard">
-            <div><label>Company: </label><label>{props.name}</label></div>
-            <div><label>Shoe size: </label><label>{props.size}</label></div>
-            <div><label>Price: </label><label>{props.price}</label></div>
-            <div className="image"><img src={props.img}/></div>
-            
-            
-            
-            
+
+
+function GetShoes() {
+    const [shoes, setShoeTable] = useState([]);
+    useEffect(()=>{
+        if(JSON.parse(localStorage.getItem("shoes"))){
+            setShoeTable(JSON.parse(localStorage.getItem("shoes")));
+        }
+        
+    },[]);
+
+    return (
+
+        <div className="ShoeTable">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Company</th>
+                        <th>Shoe size</th>
+                        <th>Price</th>
+                        <th>Amount</th>
+                        <th>Image</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {
+                        shoes.map((shoe) => 
+                            <tr>
+                                <td>{shoe.company}</td>
+                                <td>{shoe.size}</td>
+                                <td>{shoe.price}</td>
+                                <td>{shoe.amount}</td>
+                                <td><img src={shoe.img} ></img></td>
+                            </tr>
+
+                        )
+                    }
+                </tbody>
+            </table>
         </div>
+
 
     );
 }
 
-export default shoes;
+export default GetShoes;
