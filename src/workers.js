@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect, useState } from 'react';
+import Tablee from 'react-bootstrap/Table';
 
 function GetWorkers(){
     const [workers, setWorkerTable] = useState([]);
@@ -12,7 +13,7 @@ function GetWorkers(){
 
 return(
     <div className="WorkerTable">
-        <table>
+        <Tablee striped bordered hover size="sm" variant="dark" responsive="md" >
             <thead>
                 <tr>
                     <th>First name</th>
@@ -40,7 +41,7 @@ return(
                     ))
                 }
             </tbody>
-        </table>
+        </Tablee>
     </div>
 );
 }

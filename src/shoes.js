@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect, useState } from 'react';
 import './App.scss';
-
+import Tablee from 'react-bootstrap/Table';
 
 function GetShoes() {
     const [shoes, setShoeTable] = useState([]);
@@ -15,7 +15,7 @@ function GetShoes() {
     return (
 
         <div className="ShoeTable">
-            <table>
+            <Tablee striped bordered hover size="sm" variant="dark" responsive="md">
                 <thead>
                     <tr>
                         <th>Company</th>
@@ -39,7 +39,7 @@ function GetShoes() {
                         )
                     }
                 </tbody>
-            </table>
+            </Tablee>
         </div>
 
 
